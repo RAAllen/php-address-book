@@ -15,64 +15,69 @@
         <h1>Address Book</h1>
       </div>
 
-      <div class="row" id="titles">
-        <div class="col-xs-6">
-          <h4>Please enter your contact information below and then hit the add contact button.</h4>
-        </div>
-        <div class="col-xs-6">
-          <h4>Your existing address book:</h4>
-        </div>
-      </div>
-
       <div class="row">
         <div class="col-xs-6">
-          <form action="/added" method="post">
-            <div class="form-group">
-              <label for="enter_name">Enter your contact's name:</label>
-              <input name="enter_name" type="text" placeholder="Betsy Bootstrap eg.">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4>Please enter your contact information below:</h4>
             </div>
-            <div class="form-group">
-              <label for="enter_number">Enter your contact's phone number:</label>
-              <input name="enter_number" type="number" placeholder="1234567890 eg.">
-            </div>
-            <div class="form-group">
-              <label for="enter_street">Enter your contact's street address:</label>
-              <input street name="enter_street" type="text" placeholder="123 Composer Court eg.">
-            </div>
-            <div class="form-group">
-              <label for="enter_city">Enter your contact's city:</label>
-              <input name="enter_city" type="text" placeholder="PHPville eg.">
-            </div>
-            <div class="form-group">
-              <label for="enter_state">Enter your contact's state:</label>
-              <input name="enter_state" type="text" placeholder="PA eg.">
-            </div>
-            <div class="form-group">
-              <label for="enter_zip">Enter your contact's zip code:</label>
-              <input name="enter_zip" type="number" placeholder="12345 eg.">
-            </div>
-            <button type="submit" name="form-submit" class="btn btn-lg btn-success">Add Contact</button>
-          </form>
+            <div class="panel-body">
+              <form action="/added" method="post">
+                <div class="form-group">
+                  <label for="enter_name">Enter your contact's name:</label>
+                  <input class="form-control" name="enter_name" type="text" placeholder="Betsy Bootstrap eg.">
+                </div>
+                <div class="form-group">
+                  <label for="enter_number">Enter your contact's phone number:</label>
+                  <input class="form-control" name="enter_number" type="number" placeholder="1234567890 eg.">
+                </div>
+                <div class="form-group">
+                  <label for="enter_street">Enter your contact's street address:</label>
+                  <input class="form-control" street name="enter_street" type="text" placeholder="123 Composer Court eg.">
+                </div>
+                <div class="form-group">
+                  <label for="enter_city">Enter your contact's city:</label>
+                  <input class="form-control" name="enter_city" type="text" placeholder="PHPville eg.">
+                </div>
+                <div class="form-group">
+                  <label for="enter_state">Enter your contact's state:</label>
+                  <input class="form-control" name="enter_state" type="text" placeholder="PA eg.">
+                </div>
+                <div class="form-group">
+                  <label for="enter_zip">Enter your contact's zip code:</label>
+                  <input class="form-control" name="enter_zip" type="number" placeholder="12345 eg.">
+                </div>
+                <button type="submit" name="form-submit" class="btn btn-lg btn-primary btn-block">Add Contact</button>
+              </form>
 
-          <label>This button will clear out your address book:</label>
-          <form action="/deleted" method="post">
-            <button type="submit" name="form-delete" class="btn-danger btn-lg">Delete Contacts</button>
-          </form>
+              <h4>This button will clear out your address book:</h4>
+              <form action="/deleted" method="post">
+                <button type="submit" name="form-delete" class="btn-danger btn-lg btn-block">Delete Contacts</button>
+              </form>
+            </div>
+          </div>
         </div>
 
         <div class="col-xs-6">
-          {% if contacts is not empty %}
-            {% for contact in contacts %}
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-success">{{ contact.getName }}</li>
-                <li class="list-group-item">{{ contact.getNumber }}</li>
-                <li class="list-group-item">{{ contact.getStreet }}</li>
-                <li class="list-group-item">{{ contact.getCity }}</li>
-                <li class="list-group-item">{{ contact.getState }}</li>
-                <li class="list-group-item">{{ contact.getZip }}</li>
-              </ul>
-            {% endfor %}
-          {% endif %}
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4>Your existing address book:</h4>
+            </div>
+            <div class="panel-body">
+              {% if contacts is not empty %}
+                {% for contact in contacts %}
+                  <ul class="list-group">
+                    <li class="list-group-item list-group-item-info">{{ contact.getName }}</li>
+                    <li class="list-group-item">{{ contact.getNumber }}</li>
+                    <li class="list-group-item">{{ contact.getStreet }}</li>
+                    <li class="list-group-item">{{ contact.getCity }}</li>
+                    <li class="list-group-item">{{ contact.getState }}</li>
+                    <li class="list-group-item">{{ contact.getZip }}</li>
+                  </ul>
+                {% endfor %}
+              {% endif %}
+            </div>
+          </div>
         </div>
 
       </div>

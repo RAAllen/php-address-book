@@ -13,16 +13,20 @@
       <div class="page-header">
         <h1>Address Book</h1>
       </div>
-      <div class="alert alert-success" role="alert">You successfully added a contact:</div>
-      <ul class="list-group">
-        <li class="list-group-item list-group-item-success">{{enter_name.getName}}</li>
-        <li class="list-group-item">{{enter_number.getNumber}}<li>
-        <li class="list-group-item">{{enter_street.getStreet}}<li>
-        <li class="list-group-item">{{enter_city.getCity}}<li>
-        <li class="list-group-item">{{enter_state.getState}}<li>
-        <li class="list-group-item">{{enter_zip.getZip}}<li>
-      </ul>
-      <button class="btn btn-lg btn-default"><a href="/">View Your Address Book</a></button>
+      <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+          <div class="alert alert-info" role="alert">You successfully added a contact:</div>
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-info">{{ newcontact.getName }}</li>
+            <li class="list-group-item">{{ newcontact.getNumber }}<li>
+            <li class="list-group-item">{{ newcontact.getStreet }}<li>
+            <li class="list-group-item">{{ newcontact.getCity }}<li>
+            <li class="list-group-item">{{ newcontact.getState }}<li>
+            <li class="list-group-item">{{ newcontact.getZip }}<li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn btn-lg btn-default center-block"><a href="/">View Your Address Book</a></button>
     </div>
   </body>
 
