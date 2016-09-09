@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/css/styles.css" rel="stylesheet" type="text/css">
-    <title></title>
+    <title>Add Contact Success</title>
   </head>
-  <body>
 
+  <body>
+    <div class="container">
+      <h1>Address Book</h1>
+      <h3>You successfully added a contact:</h3>
+      <h4>{{enter_name.getName}}</h4>
+      <ul>
+        <li>{{enter_number.getNumber}}<li>
+        <li>{{enter_street.getStreet}}<li>
+        <li>{{enter_city.getCity}}<li>
+        <li>{{enter_state.getState}}<li>
+        <li>{{enter_zip.getZip}}<li>
+      </ul>
+      <button class="btn-primary btn-lg"><a href="/">View Your Address Book</a></button>
+    </div>
   </body>
+
 </html>

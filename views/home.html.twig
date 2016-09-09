@@ -39,10 +39,10 @@
               <label for="enter_zip">Enter your contact's zip code:</label>
               <input name="enter_zip" type="number" placeholder="12345 eg.">
             </div>
-            <button type="submit" name="form-submit" class="btn-success btn-lg">
+            <button type="submit" name="form-submit" class="btn-success btn-lg">Add Contact</button>
           </form>
 
-          <p>This button will clear out your address book:</p>
+          <label>This button will clear out your address book:</label>
           <form action="/deleted" method="post">
             <button type="submit" name="form-delete" class="btn-danger btn-lg">Delete Contacts</button>
           </form>
@@ -51,19 +51,19 @@
         <div class="col-xs-6">
           {% if contacts is not empty %}
             <h3>Your existing address book:</h3>
-            <ul>
-              {% for contact in contacts %}
-                <li>{{ contact.getName }}</li>
-                <li>{{ contact.getNumber }}</li>
-                <li>{{ contact.getStreet }}</li>
-                <li>{{ contact.getCity }}</li>
-                <li>{{ contact.getState }}</li>
-                <li>{{ contact.getZip }}</li>
-              {% endfor %}
-            </ul>
+            {% for contact in contacts %}
+              <h4>{{ contact.getName }}</h4>
+              <ul>
+                  <li>{{ contact.getNumber }}</li>
+                  <li>{{ contact.getStreet }}</li>
+                  <li>{{ contact.getCity }}</li>
+                  <li>{{ contact.getState }}</li>
+                  <li>{{ contact.getZip }}</li>
+              </ul>
+            {% endfor %}
           {% endif %}
-
         </div>
+
       </div>
     </div>
   </body>

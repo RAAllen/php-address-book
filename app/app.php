@@ -24,7 +24,7 @@
 
     $app->post('/deleted', function() use ($app) {
         Contact::deleteAll();
-        return $app['twig']->render('home.html.twig');
+        return $app['twig']->render('deleted.html.twig');
     });
 
     return $app;
