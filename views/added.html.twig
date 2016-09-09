@@ -10,17 +10,19 @@
 
   <body>
     <div class="container">
-      <h1>Address Book</h1>
-      <h3>You successfully added a contact:</h3>
-      <h4>{{enter_name.getName}}</h4>
-      <ul>
-        <li>{{enter_number.getNumber}}<li>
-        <li>{{enter_street.getStreet}}<li>
-        <li>{{enter_city.getCity}}<li>
-        <li>{{enter_state.getState}}<li>
-        <li>{{enter_zip.getZip}}<li>
+      <div class="page-header">
+        <h1>Address Book</h1>
+      </div>
+      <div class="alert alert-success" role="alert">You successfully added a contact:</div>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-success">{{enter_name.getName}}</li>
+        <li class="list-group-item">{{enter_number.getNumber}}<li>
+        <li class="list-group-item">{{enter_street.getStreet}}<li>
+        <li class="list-group-item">{{enter_city.getCity}}<li>
+        <li class="list-group-item">{{enter_state.getState}}<li>
+        <li class="list-group-item">{{enter_zip.getZip}}<li>
       </ul>
-      <button class="btn-primary btn-lg"><a href="/">View Your Address Book</a></button>
+      <button class="btn btn-lg btn-default"><a href="/">View Your Address Book</a></button>
     </div>
   </body>
 

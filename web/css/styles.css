@@ -1,0 +1,20 @@
+h1 {
+  text-align: center;
+  color: #004d00;
+  font-size: 3.5em;
+}
+
+.alert {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#titles {
+  text-align: center;
+  color: #004d00;
+  font-size: 1.4em;
+}
+
+ul {
+  list-style: none;
+}

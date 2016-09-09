@@ -10,10 +10,22 @@
 
   <body>
     <div class="container">
-      <h1>Address Book</h1>
+
+      <div class="page-header">
+        <h1>Address Book</h1>
+      </div>
+
+      <div class="row" id="titles">
+        <div class="col-xs-6">
+          <h4>Please enter your contact information below and then hit the add contact button.</h4>
+        </div>
+        <div class="col-xs-6">
+          <h4>Your existing address book:</h4>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-xs-6">
-          <p>Please enter your contact information below and then hit the add contact button.</p>
           <form action="/added" method="post">
             <div class="form-group">
               <label for="enter_name">Enter your contact's name:</label>
@@ -39,7 +51,7 @@
               <label for="enter_zip">Enter your contact's zip code:</label>
               <input name="enter_zip" type="number" placeholder="12345 eg.">
             </div>
-            <button type="submit" name="form-submit" class="btn-success btn-lg">Add Contact</button>
+            <button type="submit" name="form-submit" class="btn btn-lg btn-success">Add Contact</button>
           </form>
 
           <label>This button will clear out your address book:</label>
@@ -50,15 +62,14 @@
 
         <div class="col-xs-6">
           {% if contacts is not empty %}
-            <h3>Your existing address book:</h3>
             {% for contact in contacts %}
-              <h4>{{ contact.getName }}</h4>
-              <ul>
-                  <li>{{ contact.getNumber }}</li>
-                  <li>{{ contact.getStreet }}</li>
-                  <li>{{ contact.getCity }}</li>
-                  <li>{{ contact.getState }}</li>
-                  <li>{{ contact.getZip }}</li>
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-success">{{ contact.getName }}</li>
+                <li class="list-group-item">{{ contact.getNumber }}</li>
+                <li class="list-group-item">{{ contact.getStreet }}</li>
+                <li class="list-group-item">{{ contact.getCity }}</li>
+                <li class="list-group-item">{{ contact.getState }}</li>
+                <li class="list-group-item">{{ contact.getZip }}</li>
               </ul>
             {% endfor %}
           {% endif %}
