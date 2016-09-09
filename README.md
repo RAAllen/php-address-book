@@ -6,10 +6,12 @@
 
 ## Setup/Installation requirements
 
-* _There is a publicly viewable version of this program available online at <a href="raallen.github.io/php-address-book">raallen.github.io/php-address-book</a>._
-* _In order to utilize this project you will need a terminal application and a web browser installed on your computer._
-* _To launch the application, open your terminal and navigate to the web folder within the terminal. Then launch a local server from within the web folder. Next switch to your web browser and navigate to the server you just created. The program should now launch._
-* _In order to edit this program you should have a text editor such as atom or sublime._
+* _In order to utilize this project you will need a terminal apllication such as Terminal, a web browser such as Chrome and the Composer application installed on your computer. If you want to additionally edit this program, you must have a text editor application such as Atom._
+* _Start by opening the terminal and typing the command "git clone https://github.com/RAAllen/php-address-book.git" after navigating with the "cd" command to the location you would like the project to be cloned in to._
+* _In the terminal application navigate to the project folder using the "cd" command, then type the command "composer install"._
+* _To launch the application, navigate to the web folder using the "cd" command._
+* _Then launch a local server from within the web folder using the "php -S localhost:8000" command. If you are already running a localhost you should simply alter the number 8000 to something like 8001._
+* _Next switch to your web browser and navigate to the server localhost:8000 you just created. The program should now launch._
 
 ## Program Specifications
 
