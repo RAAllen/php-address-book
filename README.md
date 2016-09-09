@@ -1,12 +1,12 @@
 # _{PHP Address Book}_
 
-#### _{This is an address book application that will have options to add new contacts and delete all entered contacts.}, {September 9, 2016}_
+#### _{This is an address book application that will have options to add multiple contacts, view all those contacts and delete all the entered contacts.}, {September 9, 2016}_
 
 #### By _**{Rebecca Allen}**_
 
 ## Setup/Installation requirements
 
-* _There is a publicly viewable version of this program available online at <a href="raallen.github.io/php-address-book">._
+* _There is a publicly viewable version of this program available online at <a href="raallen.github.io/php-address-book">raallen.github.io/php-address-book</a>._
 * _In order to utilize this project you will need a terminal application and a web browser installed on your computer._
 * _To launch the application, open your terminal and navigate to the web folder within the terminal. Then launch a local server from within the web folder. Next switch to your web browser and navigate to the server you just created. The program should now launch._
 * _In order to edit this program you should have a text editor such as atom or sublime._
