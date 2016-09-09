@@ -3,16 +3,18 @@
     {
         private $name;
         private $number;
-        private $address;
-        private $email;
-        private $image;
+        private $street;
+        private $city;
+        private $state;
+        private $zip;
 
-        function __construct($contact_name, $contact_number, $contact_address, $contact_email, $contact_image) {
+        function __construct($contact_name, $contact_number, $contact_street, $contact_city, $contact_state, $contact_zip) {
             $this->name = $contact_name;
             $this->number = $contact_number;
-            $this->address = $contact_address;
-            $this->email = $contact_email;
-            $this->image = $contact_image;
+            $this->street = $contact_street;
+            $this->city = $contact_city;
+            $this->state = $contact_state;
+            $this->zip = $contact_zip;
         }
 
         function setName($contact_name) {
@@ -29,25 +31,32 @@
             return $this->number;
         }
 
-        function setAddress($contact_address) {
-            $this->address = (string) $contact_address;
+        function setStreet($contact_street) {
+            $this->street = (string) $contact_street;
         }
-        function getAddress() {
-            return $this->address;
-        }
-
-        function setEmail($contact_email) {
-            $this->email = (string) $contact_email;
-        }
-        function getEmail() {
-            return $this->email;
+        function getStreet() {
+            return $this->street;
         }
 
-        function setImage($contact_image) {
-            $this->image = (string) $contact_image;
+        function setCity($contact_city) {
+            $this->city = (string) $contact_city;
         }
-        function getImage() {
-            return $this->image;
+        function getCity() {
+            return $this->city;
+        }
+
+        function setState($contact_state) {
+            $this->state = (string) $contact_state;
+        }
+        function getState() {
+            return $this->state;
+        }
+
+        function setZip($contact_zip) {
+            $this->zip = (string) $contact_zip;
+        }
+        function getZip() {
+            return $this->zip;
         }
 
         function save() {
